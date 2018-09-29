@@ -13,19 +13,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var OpenArrayContainer_1 = require("./OpenArrayContainer");
-var removeAllOf_removeAllOfEach_1 = require("intuitive-array-handlers/modify/return_void/removeAllOf_removeAllOfEach");
-var removeFirstOf_removeFirstOfEach_1 = require("intuitive-array-handlers/modify/return_void/removeFirstOf_removeFirstOfEach");
-var removeAdjacent_1 = require("intuitive-array-handlers/modify/return_void/removeAdjacent");
-var removeItem_1 = require("intuitive-array-handlers/modify/return_void/removeItem");
-var removeHead_1 = require("intuitive-array-handlers/modify/return_void/removeHead");
-var removeTail_1 = require("intuitive-array-handlers/modify/return_void/removeTail");
-var removeAllAfterFirst_1 = require("intuitive-array-handlers/modify/return_void/removeAllAfterFirst");
-var removeAllAfterLast_1 = require("intuitive-array-handlers/modify/return_void/removeAllAfterLast");
-var removeAllBeforeFirst_1 = require("intuitive-array-handlers/modify/return_void/removeAllBeforeFirst");
-var removeAllBeforeLast_1 = require("intuitive-array-handlers/modify/return_void/removeAllBeforeLast");
-var removeAllDuplicates_1 = require("intuitive-array-handlers/modify/return_void/removeAllDuplicates");
-var removeAdjacentToValue_1 = require("intuitive-array-handlers/modify/return_void/removeAdjacentToValue");
+var OpenArrayContainer_1 = require("@writetome51/open-array-container/OpenArrayContainer");
+var removeAllOf_removeAllOfEach_1 = require("@writetome51/array-remove-all-of-first-of/removeAllOf_removeAllOfEach");
+var removeFirstOf_removeFirstOfEach_1 = require("@writetome51/array-remove-all-of-first-of/removeFirstOf_removeFirstOfEach");
+var removeAdjacentAt_1 = require("@writetome51/array-removers-basic/removeAdjacentAt");
+var removeItem_1 = require("@writetome51/array-removers-basic/removeItem");
+var removeHead_1 = require("@writetome51/array-removers-basic/removeHead");
+var removeTail_1 = require("@writetome51/array-removers-basic/removeTail");
+var removeMiddle_1 = require("@writetome51/array-removers-basic/removeMiddle");
+var removeAllAfterFirst_1 = require("@writetome51/array-remove-all-after-before/removeAllAfterFirst");
+var removeAllAfterLast_1 = require("@writetome51/array-remove-all-after-before/removeAllAfterLast");
+var removeAllBeforeFirst_1 = require("@writetome51/array-remove-all-after-before/removeAllBeforeFirst");
+var removeAllBeforeLast_1 = require("@writetome51/array-remove-all-after-before/removeAllBeforeLast");
+var removeDuplicates_1 = require("@writetome51/array-remove-duplicates/removeDuplicates");
+var removeAdjacentToValue_1 = require("@writetome51/array-remove-adjacent-to-value/removeAdjacentToValue");
 var OpenArrayItemRemover = /** @class */ (function (_super) {
     __extends(OpenArrayItemRemover, _super);
     function OpenArrayItemRemover(data) {
@@ -38,8 +39,8 @@ var OpenArrayItemRemover = /** @class */ (function (_super) {
         return this.returnThis_after(removeItem_1.removeItem(index, this.data));
     };
     // startingIndex can be negative or positive.
-    OpenArrayItemRemover.prototype.adjacent = function (startingIndex, numItemsToRemove) {
-        return this.returnThis_after(removeAdjacent_1.removeAdjacent(startingIndex, numItemsToRemove, this.data));
+    OpenArrayItemRemover.prototype.adjacentAt = function (startingIndex, numItemsToRemove) {
+        return this.returnThis_after(removeAdjacentAt_1.removeAdjacentAt(startingIndex, numItemsToRemove, this.data));
     };
     // info = {value: anyExceptObject, offset: number, howMany: number}
     OpenArrayItemRemover.prototype.adjacentToValue = function (info) {
@@ -50,6 +51,9 @@ var OpenArrayItemRemover = /** @class */ (function (_super) {
     };
     OpenArrayItemRemover.prototype.tail = function (numItemsToRemove) {
         return this.returnThis_after(removeTail_1.removeTail(numItemsToRemove, this.data));
+    };
+    OpenArrayItemRemover.prototype.middle = function (numItemsToKeepAtEachEnd) {
+        return this.returnThis_after(removeMiddle_1.removeMiddle(numItemsToKeepAtEachEnd, this.data));
     };
     // value cannot be object.
     OpenArrayItemRemover.prototype.firstOf = function (value) {
@@ -80,9 +84,7 @@ var OpenArrayItemRemover = /** @class */ (function (_super) {
         return this.returnThis_after(removeAllBeforeLast_1.removeAllBeforeLast(value, this.data));
     };
     OpenArrayItemRemover.prototype.duplicates = function () {
-        return this.returnThis_after(removeAllDuplicates_1.removeAllDuplicates(this.data));
-    };
-    OpenArrayItemRemover.prototype.middle = function () {
+        return this.returnThis_after(removeDuplicates_1.removeDuplicates(this.data));
     };
     return OpenArrayItemRemover;
 }(OpenArrayContainer_1.OpenArrayContainer));
