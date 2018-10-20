@@ -110,5 +110,25 @@ export class OpenArrayItemRemover extends OpenArrayContainer {
 	}
 
 
+	// testFunction has same signature as callback passed to array.filter():
+	byTest(testFunction): this {
+		return this.returnThis_after(getAndRemoveFilteredResults(testFunction, this.data));
+	}
+
+
+	byType(type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined'): any[] {
+		if (type === 'array') {
+			return this.byTest((item) => {
+				return (isArray(item));
+			});
+		}
+		else {
+			return this.byTest((item) => {
+				return (typeof item === type);
+			});
+		}
+	}
+
+
 
 }

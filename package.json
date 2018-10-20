@@ -1,8 +1,8 @@
 {
   "name": "@writetome51/open-array-item-remover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an array-manipulating typescript/javascript class with methods that remove items from the array",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
