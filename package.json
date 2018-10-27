@@ -1,26 +1,48 @@
 {
-  "name": "@writetome51/open-array-item-remover",
-  "version": "1.0.1",
+  "name": "@writetome51/public-array-item-remover",
+  "version": "1.0.2",
   "description": "an array-manipulating typescript/javascript class with methods that remove items from the array",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/public-array-item-remover.git"
   },
   "keywords": [
     "array",
     "manipulation",
+    "remove",
+    "remover",
+    "item",
+    "items",
     "typescript",
     "class"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/public-array-item-remover/issues"
+  },
+  "homepage": "https://github.com/writetome51/public-array-item-remover#readme",
+  "devDependencies": {
+    "@writetome51/arrays-match": "latest",
+    "typescript": "^3.0.1"
+  },
   "dependencies": {
-    "@writetome51/open-array-container": "latest",
+    "basic-data-handling": "latest",
+    "@writetome51/public-array-container": "latest",
     "@writetome51/array-remove-all-of-first-of": "latest",
-    "@writetome51/array-removers-basic": "latest",
+    "@writetome51/array-remove-adjacent-at": "latest",
+    "@writetome51/array-remove-item": "latest",
+    "@writetome51/array-remove-head-tail": "latest",
+    "@writetome51/array-remove-between": "latest",
     "@writetome51/array-remove-all-after-before": "latest",
     "@writetome51/array-remove-duplicates": "latest",
     "@writetome51/array-remove-adjacent-to-value": "latest",
-    "@writetome51/adjacent-to-value-info-interface": "latest"
+    "@writetome51/adjacent-to-value-info-interface": "latest",
+    "@writetome51/array-remove-filtered-results": "latest"
   }
 }
