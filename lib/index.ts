@@ -4,7 +4,8 @@ import { PublicArrayContainer } from '@writetome51/public-array-container';
 import { removeAllOf, removeAllOfEach } from '@writetome51/array-remove-all-of-first-of';
 import { removeFirstOf, removeFirstOfEach } from '@writetome51/array-remove-all-of-first-of';
 import { removeAdjacentAt } from '@writetome51/array-remove-adjacent-at/removeAdjacentAt';
-import { removeItem } from '@writetome51/array-remove-item';
+import { removeByIndex } from '@writetome51/array-remove-by-index';
+import { removeByIndexes } from '@writetome51/array-remove-by-indexes';
 import { removeHead } from '@writetome51/array-remove-head-tail/removeHead';
 import { removeTail } from '@writetome51/array-remove-head-tail/removeTail';
 import { removeBetween } from '@writetome51/array-remove-between';
@@ -30,8 +31,14 @@ export class PublicArrayItemRemover extends PublicArrayContainer {
 
 
 	// index can be negative or positive.
-	item(index): this {
-		return this.returnThis_after(removeItem(index, this.data));
+	byIndex(index): this {
+		return this.returnThis_after(removeByIndex(index, this.data));
+	}
+
+
+	// indexes can be negative or positive.
+	byIndexes(indexes): this {
+		return this.returnThis_after(removeByIndexes(indexes, this.data));
 	}
 
 
@@ -126,3 +133,6 @@ export class PublicArrayItemRemover extends PublicArrayContainer {
 
 
 }
+
+//
+//

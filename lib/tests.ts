@@ -7,9 +7,15 @@ let otherArr = remove.data;
 
 
 // Test 1
-remove.item(-1);
+let obj = remove.byIndex(-1);
 if (arraysMatch(remove.data, [1, 2, 3, 4, 5, 6, 7, 8, 9])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
+
+
+// Test 1A
+if (obj.className && obj.className === 'PublicArrayItemRemover' &&
+	arraysMatch(remove.data, obj.data)) console.log('test 1A passed');
+else console.log('test 1A FAILED');
 
 
 //Test 2
@@ -17,7 +23,20 @@ if (arraysMatch(remove.data, otherArr)) console.log('test 2 passed');
 else console.log('test 2 FAILED');
 
 
+// Test 2A
+remove.byIndexes([-1, 0, 3]);
+if (arraysMatch(remove.data, [2, 3, 5, 6, 7, 8])) console.log('test 2A passed');
+else console.log('test 2A FAILED');
+
+
+//Test 2B
+if (arraysMatch(remove.data, otherArr)) console.log('test 2B passed');
+else console.log('test 2B FAILED');
+
+
 // Test 3
+remove.data =  [1, 2, 3, 4, 5, 6, 7, 8, 9];
+otherArr = remove.data;
 remove.adjacentAt(-3, 2);
 if (arraysMatch(remove.data, [1, 2, 3, 4, 5, 6, 9])) console.log('test 3 passed');
 else console.log('test 3 FAILED');
@@ -210,7 +229,7 @@ else console.log('test 32 FAILED');
 remove.data = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, (item) => item === 1];
 otherArr = remove.data;
 // Save this for test 35:
-let obj = remove.byType('function');
+obj = remove.byType('function');
 if (arraysMatch(remove.data, [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4])) console.log('test 33 passed');
 else console.log('test 33 FAILED');
 

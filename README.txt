@@ -18,7 +18,11 @@ These are all of them:
 
 
 	// index can be negative or positive.
-	item(index): this
+	byIndex(index): this
+
+
+	// indexes can be negative or positive.
+	byIndexes(indexes): this
 
 
 	// startingIndex can be negative or positive.  Removes adjacent items.
