@@ -36,8 +36,8 @@ All the methods:
         	 {
                 value: any except object (the value to search for in the array),
                 offset: integer (tells function where, in relation to value, to begin selecting adjacent
-                    items to remove/return.  If offset is zero, the selection will begin with value.)
-                howMany: integer greater than zero (it's how many adjacent items to remove/return)
+                    items to remove.  If offset is zero, the selection will begin with value.)
+                howMany: integer greater than zero (it's how many adjacent items to remove)
         	 }
         
         Example:

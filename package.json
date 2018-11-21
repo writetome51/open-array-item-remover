@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/public-array-remover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An array-manipulating typescript/javascript class with methods that remove items from the array",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
