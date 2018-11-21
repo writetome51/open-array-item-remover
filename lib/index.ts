@@ -19,7 +19,7 @@ import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interf
 import { removeFilteredResults } from '@writetome51/array-remove-filtered-results';
 
 
-export class PublicArrayItemRemover extends PublicArrayContainer {
+export class PublicArrayRemover extends PublicArrayContainer {
 
 
 	constructor(data: any[] = []) {

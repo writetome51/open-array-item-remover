@@ -1,19 +1,19 @@
 To include in your project:
 
-import {PublicArrayItemRemover} from '@writetome51/public-array-item-remover';
+import {PublicArrayRemover} from '@writetome51/public-array-remover';
 
-The PublicArrayItemRemover class is a dependency of the PublicArray class
+The PublicArrayRemover class is a dependency of the PublicArray class
 ( package:  @writetome51/public-array ).
 
 To instantiate, pass the actual array it will contain into its constructor:
 
-let remove = new PublicArrayItemRemover( [item1, item2, item3,...] );
+let remove = new PublicArrayRemover( [item1, item2, item3,...] );
 
 You can also reset the array by accessing the class 'data' property:
 
 remove.data = [1,2,3,4,...];
 
-PublicArrayItemRemover has methods that all remove items from the array and return the class instance.
+PublicArrayRemover has methods that all remove items from the array and return the class instance.
 These are all of them:
 
 
