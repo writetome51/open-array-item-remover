@@ -1,22 +1,19 @@
 import { isArray } from 'basic-data-handling/isArray_notArray';
 import { errorIfNotString } from 'basic-data-handling/errorIfNotString';
 import { PublicArrayContainer } from '@writetome51/public-array-container';
-import { removeAllOf, removeAllOfEach } from '@writetome51/array-remove-all-of-first-of';
-import { removeFirstOf, removeFirstOfEach } from '@writetome51/array-remove-all-of-first-of';
-import { removeAdjacentAt } from '@writetome51/array-remove-adjacent-at/removeAdjacentAt';
+import { removeAllOf, removeAllOfEach, removeFirstOf, removeFirstOfEach }
+	from '@writetome51/array-remove-all-of-first-of';
+import { removeAdjacentAt } from '@writetome51/array-remove-adjacent-at';
 import { removeByIndex } from '@writetome51/array-remove-by-index';
 import { removeByIndexes } from '@writetome51/array-remove-by-indexes';
-import { removeHead } from '@writetome51/array-remove-head-tail/removeHead';
-import { removeTail } from '@writetome51/array-remove-head-tail/removeTail';
+import { removeHead, removeTail } from '@writetome51/array-remove-head-tail';
 import { removeBetween } from '@writetome51/array-remove-between';
-import { removeAllAfterFirst } from '@writetome51/array-remove-all-after-before';
-import { removeAllAfterLast } from '@writetome51/array-remove-all-after-before';
-import { removeAllBeforeFirst } from '@writetome51/array-remove-all-after-before';
-import { removeAllBeforeLast } from '@writetome51/array-remove-all-after-before';
-import { removeDuplicates } from '@writetome51/array-remove-duplicates/removeDuplicates';
-import { removeAdjacentToValue } from '@writetome51/array-remove-adjacent-to-value/removeAdjacentToValue';
-import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
+import { removeAllAfterFirst, removeAllAfterLast, removeAllBeforeFirst, removeAllBeforeLast }
+	from '@writetome51/array-remove-all-after-before';
+import { removeDuplicates } from '@writetome51/array-remove-duplicates';
+import { removeAdjacentToValue } from '@writetome51/array-remove-adjacent-to-value';
 import { removeFilteredResults } from '@writetome51/array-remove-filtered-results';
+import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
 
 
 export class PublicArrayRemover extends PublicArrayContainer {
@@ -134,5 +131,4 @@ export class PublicArrayRemover extends PublicArrayContainer {
 
 }
 
-//
 //

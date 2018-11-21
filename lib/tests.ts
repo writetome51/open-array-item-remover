@@ -1,8 +1,8 @@
-import { PublicArrayItemRemover } from './index';
+import { PublicArrayRemover } from './index';
 import { arraysMatch } from '@writetome51/arrays-match';
 
 
-let remove = new PublicArrayItemRemover([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let remove = new PublicArrayRemover([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 let otherArr = remove.data;
 
 
@@ -13,7 +13,7 @@ else console.log('test 1 FAILED');
 
 
 // Test 1A
-if (obj.className && obj.className === 'PublicArrayItemRemover' &&
+if (obj.className && obj.className === 'PublicArrayRemover' &&
 	arraysMatch(remove.data, obj.data)) console.log('test 1A passed');
 else console.log('test 1A FAILED');
 
@@ -239,7 +239,7 @@ if (arraysMatch(remove.data, otherArr)) console.log('test 34 passed');
 else console.log('test 34 FAILED');
 
 //Test 35: did .byType() return class instance in test 33?
-if (obj.className && obj.className === 'PublicArrayItemRemover' &&
+if (obj.className && obj.className === 'PublicArrayRemover' &&
 	arraysMatch(remove.data, obj.data))
 	console.log('test 35 passed');
 else console.log('test 35 FAILED');

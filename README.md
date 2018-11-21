@@ -1,20 +1,18 @@
 To include in your project:
 
-import {PublicArrayRemover} from '@writetome51/public-array-remover';
+    import {PublicArrayRemover} from '@writetome51/public-array-remover';
 
-The PublicArrayRemover class is a dependency of the PublicArray class
-( package:  @writetome51/public-array ).
+PublicArrayRemover has methods that all remove items from the array and return the class instance.
 
 To instantiate, pass the actual array it will contain into its constructor:
 
-let remove = new PublicArrayRemover( [item1, item2, item3,...] );
+    let remove = new PublicArrayRemover( [item1, item2, item3,...] );
 
 You can also reset the array by accessing the class 'data' property:
 
-remove.data = [1,2,3,4,...];
+    remove.data = [1,2,3,4,...];
 
-PublicArrayRemover has methods that all remove items from the array and return the class instance.
-These are all of them:
+All the methods:
 
 
 	// index can be negative or positive.
@@ -29,9 +27,24 @@ These are all of them:
 	adjacentAt(startingIndex, numItemsToRemove): this
 
 
-	// info = {value: anyExceptObject,  offset: integer,  howMany: integer greater than zero}
-	// Only affects first instance of info.value
 	adjacentToValue(info): this
+	/********
+    Explanation of adjacentToValue(info: IAdjacentToValueInfo): any[]
+        Removes adjacent items including, or near, a particular value.
+        Only applies to the first instance of value found in array.
+        The parameter 'info' is an object that looks like this:
+        	 {
+                value: any except object (the value to search for in the array),
+                offset: integer (tells function where, in relation to value, to begin selecting adjacent
+                    items to remove/return.  If offset is zero, the selection will begin with value.)
+                howMany: integer greater than zero (it's how many adjacent items to remove/return)
+        	 }
+        
+        Example:
+            let remove = new PublicArrayRemover( [1,2,3,4,5,6,7,8,9,10] );
+            remove.adjacentToValue({value:5, offset: -2, howMany:3});
+            // remove.data is now [1,2,6,7,8,9,10]
+    *********/
 
 
     // Removes numItemsToRemove from array's beginning.

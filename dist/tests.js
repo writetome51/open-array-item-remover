@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = require("./index");
 var arrays_match_1 = require("@writetome51/arrays-match");
-var remove = new index_1.PublicArrayItemRemover([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+var remove = new index_1.PublicArrayRemover([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 var otherArr = remove.data;
 // Test 1
 var obj = remove.byIndex(-1);
@@ -11,7 +11,7 @@ if (arrays_match_1.arraysMatch(remove.data, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
 else
     console.log('test 1 FAILED');
 // Test 1A
-if (obj.className && obj.className === 'PublicArrayItemRemover' &&
+if (obj.className && obj.className === 'PublicArrayRemover' &&
     arrays_match_1.arraysMatch(remove.data, obj.data))
     console.log('test 1A passed');
 else
@@ -238,7 +238,7 @@ if (arrays_match_1.arraysMatch(remove.data, otherArr))
 else
     console.log('test 34 FAILED');
 //Test 35: did .byType() return class instance in test 33?
-if (obj.className && obj.className === 'PublicArrayItemRemover' &&
+if (obj.className && obj.className === 'PublicArrayRemover' &&
     arrays_match_1.arraysMatch(remove.data, obj.data))
     console.log('test 35 passed');
 else

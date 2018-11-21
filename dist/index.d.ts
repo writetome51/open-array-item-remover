@@ -2,7 +2,7 @@ import { PublicArrayContainer } from '@writetome51/public-array-container';
 import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
 
 
-export declare class PublicArrayItemRemover extends PublicArrayContainer {
+export declare class PublicArrayRemover extends PublicArrayContainer {
 	constructor(data?: any[]);
 
 
