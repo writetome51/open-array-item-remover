@@ -3,28 +3,29 @@ import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interf
 
 
 export declare class PublicArrayRemover extends PublicArrayContainer {
+
 	constructor(data?: any[]);
 
 
-	byIndex(index: any): this;
+	byIndex(index: number): this;
 
 
-	byIndexes(indexes: any): this;
+	byIndexes(indexes: number[]): this;
 
 
-	adjacentAt(startingIndex: any, numItemsToRemove: any): this;
+	adjacentAt(startingIndex: number, numItemsToRemove: number): this;
 
 
 	adjacentToValue(info: IAdjacentToValueInfo): this;
 
 
-	head(numItemsToRemove: any): this;
+	head(numItemsToRemove: number): this;
 
 
-	tail(numItemsToRemove: any): this;
+	tail(numItemsToRemove: number): this;
 
 
-	between(numItemsToKeepAtEachEnd: any): this;
+	between(numItemsToKeepAtEachEnd: number): this;
 
 
 	firstOf(value: any): this;
@@ -54,7 +55,7 @@ export declare class PublicArrayRemover extends PublicArrayContainer {
 	duplicates(): this;
 
 
-	byTest(testFunction: (currentItem: any, currentIndex?: any, array?: any) => boolean): this;
+	byTest(testFunction: (currentItem: any, currentIndex?: number, array?: any[]) => boolean): this;
 
 
 	byType(type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined'): this;

@@ -29,93 +29,93 @@ export class PublicArrayRemover extends PublicArrayContainer {
 
 	// index can be negative or positive.
 	byIndex(index): this {
-		return this.returnThis_after(removeByIndex(index, this.data));
+		return this._returnThis_after(removeByIndex(index, this.data));
 	}
 
 
 	// indexes can be negative or positive.
 	byIndexes(indexes): this {
-		return this.returnThis_after(removeByIndexes(indexes, this.data));
+		return this._returnThis_after(removeByIndexes(indexes, this.data));
 	}
 
 
 	// startingIndex can be negative or positive.
 	adjacentAt(startingIndex, numItemsToRemove): this {
-		return this.returnThis_after(removeAdjacentAt(startingIndex, numItemsToRemove, this.data));
+		return this._returnThis_after(removeAdjacentAt(startingIndex, numItemsToRemove, this.data));
 	}
 
 
 	// info = {value: anyExceptObject,  offset: integer,  howMany: integer greater than zero}
 	adjacentToValue(info: IAdjacentToValueInfo): this {
-		return this.returnThis_after(removeAdjacentToValue(info, this.data));
+		return this._returnThis_after(removeAdjacentToValue(info, this.data));
 	}
 
 
 	head(numItemsToRemove): this {
-		return this.returnThis_after(removeHead(numItemsToRemove, this.data));
+		return this._returnThis_after(removeHead(numItemsToRemove, this.data));
 	}
 
 
 	tail(numItemsToRemove): this {
-		return this.returnThis_after(removeTail(numItemsToRemove, this.data));
+		return this._returnThis_after(removeTail(numItemsToRemove, this.data));
 	}
 
 
 	between(numItemsToKeepAtEachEnd): this {
-		return this.returnThis_after(removeBetween(numItemsToKeepAtEachEnd, this.data));
+		return this._returnThis_after(removeBetween(numItemsToKeepAtEachEnd, this.data));
 	}
 
 
 	// value cannot be object (that applies to all functions here with a parameter called 'value').
 	firstOf(value): this {
-		return this.returnThis_after(removeFirstOf(value, this.data));
+		return this._returnThis_after(removeFirstOf(value, this.data));
 	}
 
 
 	// values cannot contain object (that applies to all functions here with a parameter
 	// called 'values').
 	firstOfEach(values: any[]): this {
-		return this.returnThis_after(removeFirstOfEach(values, this.data));
+		return this._returnThis_after(removeFirstOfEach(values, this.data));
 	}
 
 
 	allOf(value): this {
-		return this.returnThis_after(removeAllOf(value, this.data));
+		return this._returnThis_after(removeAllOf(value, this.data));
 	}
 
 
 	allOfEach(values: any[]): this {
-		return this.returnThis_after(removeAllOfEach(values, this.data));
+		return this._returnThis_after(removeAllOfEach(values, this.data));
 	}
 
 
 	allAfterFirst(value: any): this {
-		return this.returnThis_after(removeAllAfterFirst(value, this.data));
+		return this._returnThis_after(removeAllAfterFirst(value, this.data));
 	}
 
 
 	allBeforeFirst(value: any): this {
-		return this.returnThis_after(removeAllBeforeFirst(value, this.data));
+		return this._returnThis_after(removeAllBeforeFirst(value, this.data));
 	}
 
 
 	allAfterLast(value): this {
-		return this.returnThis_after(removeAllAfterLast(value, this.data));
+		return this._returnThis_after(removeAllAfterLast(value, this.data));
 	}
 
 
 	allBeforeLast(value): this {
-		return this.returnThis_after(removeAllBeforeLast(value, this.data));
+		return this._returnThis_after(removeAllBeforeLast(value, this.data));
 	}
 
 
 	duplicates(): this {
-		return this.returnThis_after(removeDuplicates(this.data));
+		return this._returnThis_after(removeDuplicates(this.data));
 	}
 
 
 	byTest(testFunction: (currentItem, currentIndex?, array?) => boolean): this {
-		return this.returnThis_after(removeFilteredResults(testFunction, this.data));
+		return this._returnThis_after(removeFilteredResults(testFunction, this.data));
 	}
 
 
@@ -130,5 +130,3 @@ export class PublicArrayRemover extends PublicArrayContainer {
 
 
 }
-
-//
