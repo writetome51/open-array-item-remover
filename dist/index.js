@@ -22,10 +22,11 @@ var array_remove_by_index_1 = require("@writetome51/array-remove-by-index");
 var array_remove_by_indexes_1 = require("@writetome51/array-remove-by-indexes");
 var array_remove_head_tail_1 = require("@writetome51/array-remove-head-tail");
 var array_remove_between_1 = require("@writetome51/array-remove-between");
-var array_remove_all_after_before_1 = require("@writetome51/array-remove-all-after-before");
+var array_remove_all_after_1 = require("@writetome51/array-remove-all-after");
+var array_remove_all_before_1 = require("@writetome51/array-remove-all-before");
 var array_remove_duplicates_1 = require("@writetome51/array-remove-duplicates");
 var array_remove_adjacent_to_value_1 = require("@writetome51/array-remove-adjacent-to-value");
-var array_remove_filtered_results_1 = require("@writetome51/array-remove-filtered-results");
+var array_remove_by_test_1 = require("@writetome51/array-remove-by-test");
 var PublicArrayRemover = /** @class */ (function (_super) {
     __extends(PublicArrayRemover, _super);
     function PublicArrayRemover(data) {
@@ -63,7 +64,7 @@ var PublicArrayRemover = /** @class */ (function (_super) {
         return this._returnThis_after(array_remove_all_of_first_of_1.removeFirstOf(value, this.data));
     };
     // values cannot contain object (that applies to all functions here with a parameter
-    // called 'values').
+    // called 'values'). Arrays are ok, as long as they don't contain objects.
     PublicArrayRemover.prototype.firstOfEach = function (values) {
         return this._returnThis_after(array_remove_all_of_first_of_1.removeFirstOfEach(values, this.data));
     };
@@ -74,22 +75,22 @@ var PublicArrayRemover = /** @class */ (function (_super) {
         return this._returnThis_after(array_remove_all_of_first_of_1.removeAllOfEach(values, this.data));
     };
     PublicArrayRemover.prototype.allAfterFirst = function (value) {
-        return this._returnThis_after(array_remove_all_after_before_1.removeAllAfterFirst(value, this.data));
+        return this._returnThis_after(array_remove_all_after_1.removeAllAfterFirst(value, this.data));
     };
     PublicArrayRemover.prototype.allBeforeFirst = function (value) {
-        return this._returnThis_after(array_remove_all_after_before_1.removeAllBeforeFirst(value, this.data));
+        return this._returnThis_after(array_remove_all_before_1.removeAllBeforeFirst(value, this.data));
     };
     PublicArrayRemover.prototype.allAfterLast = function (value) {
-        return this._returnThis_after(array_remove_all_after_before_1.removeAllAfterLast(value, this.data));
+        return this._returnThis_after(array_remove_all_after_1.removeAllAfterLast(value, this.data));
     };
     PublicArrayRemover.prototype.allBeforeLast = function (value) {
-        return this._returnThis_after(array_remove_all_after_before_1.removeAllBeforeLast(value, this.data));
+        return this._returnThis_after(array_remove_all_before_1.removeAllBeforeLast(value, this.data));
     };
     PublicArrayRemover.prototype.duplicates = function () {
         return this._returnThis_after(array_remove_duplicates_1.removeDuplicates(this.data));
     };
     PublicArrayRemover.prototype.byTest = function (testFunction) {
-        return this._returnThis_after(array_remove_filtered_results_1.removeFilteredResults(testFunction, this.data));
+        return this._returnThis_after(array_remove_by_test_1.removeByTest(testFunction, this.data));
     };
     PublicArrayRemover.prototype.byType = function (type) {
         errorIfNotString_1.errorIfNotString(type);

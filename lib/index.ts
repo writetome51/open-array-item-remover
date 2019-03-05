@@ -8,12 +8,13 @@ import { removeByIndex } from '@writetome51/array-remove-by-index';
 import { removeByIndexes } from '@writetome51/array-remove-by-indexes';
 import { removeHead, removeTail } from '@writetome51/array-remove-head-tail';
 import { removeBetween } from '@writetome51/array-remove-between';
-import { removeAllAfterFirst, removeAllAfterLast, removeAllBeforeFirst, removeAllBeforeLast }
-	from '@writetome51/array-remove-all-after-before';
+import { removeAllAfterFirst, removeAllAfterLast } from '@writetome51/array-remove-all-after';
+import { removeAllBeforeFirst, removeAllBeforeLast } from '@writetome51/array-remove-all-before';
 import { removeDuplicates } from '@writetome51/array-remove-duplicates';
 import { removeAdjacentToValue } from '@writetome51/array-remove-adjacent-to-value';
-import { removeFilteredResults } from '@writetome51/array-remove-filtered-results';
+import { removeByTest } from '@writetome51/array-remove-by-test';
 import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
+
 
 
 export class PublicArrayRemover extends PublicArrayContainer {
@@ -73,7 +74,7 @@ export class PublicArrayRemover extends PublicArrayContainer {
 
 
 	// values cannot contain object (that applies to all functions here with a parameter
-	// called 'values').
+	// called 'values'). Arrays are ok, as long as they don't contain objects.
 	firstOfEach(values: any[]): this {
 		return this._returnThis_after(removeFirstOfEach(values, this.data));
 	}
@@ -115,7 +116,7 @@ export class PublicArrayRemover extends PublicArrayContainer {
 
 
 	byTest(testFunction: (currentItem, currentIndex?, array?) => boolean): this {
-		return this._returnThis_after(removeFilteredResults(testFunction, this.data));
+		return this._returnThis_after(removeByTest(testFunction, this.data));
 	}
 
 

@@ -3,37 +3,21 @@
 An array-manipulating Typescript/Javascript class with methods that remove items   
 from the array.
 
-## Installation
 
-You must have npm installed first.  Then, in the command line:
-
-```bash
-npm install @writetome51/public-array-remover
+## Constructor
+```
+constructor(data? = [])  // 'data' becomes the array the class manipulates.
 ```
 
-## Loading
-
-     // if using Typescript:
-    import {PublicArrayRemover} from '@writetome51/public-array-remover';
-     // if using ES5 Javascript:
-    var PublicArrayRemover = 
-            require('@writetome51/public-array-remover').PublicArrayRemover;
-
-
-## Instantiation
-
-    let remove = new PublicArrayRemover( [item1, item2, item3,...] );
-    // Or, instantiate with an empty array:
-    let remove = new PublicArrayRemover();
-
 You can also reset the array by accessing the class `.data` property:
-
-    remove.data = [1,2,3,4,...];
+```
+this.data = [1,2,3,4];
+```
 
 
 ## Properties
 
-    data : any[] (read-writable) // the actual array
+    data : any[]  // the actual array
 
     className: string (read-only)
 
@@ -99,10 +83,10 @@ allOf(value): this
 allOfEach(values: any[]): this
     // Removes all instances of each value.
 
-allAfterFirst(value: any): this
+allAfterFirst(value): this
     // Removes all items after first instance of value.
 
-allBeforeFirst(value: any): this
+allBeforeFirst(value): this
     // Removes all items before first instance of value.
 
 allAfterLast(value): this
@@ -120,9 +104,11 @@ byTest(testFunction: (currentItem, currentIndex?, array?) => boolean): this
 byType(
     type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined'
 ): this
-    // type can be any of the strings listed.
-
-
+    // Removes all items that are of the passed type.
+```
+The methods below are not important to know about in order to use this  
+class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
+```
 protected   _createGetterAndOrSetterForEach(
 		propertyNames: string[],
 		configuration: IGetterSetterConfiguration
@@ -165,6 +151,22 @@ protected   _runMethod_and_returnThis(
 ## Inheritance Chain
 
 PublicArrayRemover<--[PublicArrayContainer](https://github.com/writetome51/public-array-container#publicarraycontainer)<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
+
+## Installation
+
+You must have npm installed first.  Then, in the command line:
+
+```bash
+npm install @writetome51/public-array-remover
+```
+
+## Loading
+
+     // if using Typescript:
+    import {PublicArrayRemover} from '@writetome51/public-array-remover';
+     // if using ES5 Javascript:
+    var PublicArrayRemover = 
+            require('@writetome51/public-array-remover').PublicArrayRemover;
 
 
 ## License
