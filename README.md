@@ -102,9 +102,11 @@ byTest(testFunction: (currentItem, currentIndex?, array?) => boolean): this
     // if currentItem passes test, it is removed.
 
 byType(
-    type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined'
+    type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined' | 'null'
 ): this
     // Removes all items that are of the passed type.
+    // Here, 'null' is considered its own type, separate from 'object'.
+    // You can also pass 'array' as a type.  Passing 'object' will match with objects and arrays.
 ```
 The methods below are not important to know about in order to use this  
 class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .

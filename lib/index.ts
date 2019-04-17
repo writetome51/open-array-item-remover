@@ -1,6 +1,6 @@
-import { isArray } from 'basic-data-handling/isArray_notArray';
-import { errorIfNotString } from 'basic-data-handling/errorIfNotString';
 import { PublicArrayContainer } from '@writetome51/public-array-container';
+import { _publicArrayContainer_byType_implementation }
+	from '@writetome51/public-array-container-by-type-implementation';
 import { removeAllOf, removeAllOfEach, removeFirstOf, removeFirstOfEach }
 	from '@writetome51/array-remove-all-of-first-of';
 import { removeAdjacentAt } from '@writetome51/array-remove-adjacent-at';
@@ -14,7 +14,6 @@ import { removeDuplicates } from '@writetome51/array-remove-duplicates';
 import { removeAdjacentToValue } from '@writetome51/array-remove-adjacent-to-value';
 import { removeByTest } from '@writetome51/array-remove-by-test';
 import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interface/IAdjacentToValueInfo';
-
 
 
 export class PublicArrayRemover extends PublicArrayContainer {
@@ -120,13 +119,11 @@ export class PublicArrayRemover extends PublicArrayContainer {
 	}
 
 
-	byType(type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined'): this {
-		errorIfNotString(type);
-		// @ts-ignore
-		type = type.toLowerCase();
-		if (type === 'array') return this.byTest((item) => isArray(item));
+	byType(
+		type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined' | 'null'
+	): this {
 
-		else return this.byTest((item) => typeof item === type);
+		return _publicArrayContainer_byType_implementation(type, this);
 	}
 
 

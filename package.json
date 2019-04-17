@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/public-array-remover",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "An array-manipulating typescript/javascript class with methods that remove items from the array",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/writetome51/public-array-remover#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "~1.0.3"
+    "@writetome51/arrays-match": "~1.0.6"
   },
   "dependencies": {
-    "basic-data-handling": "~1.0.15",
-    "@writetome51/public-array-container": "~2.0.2",
+    "@writetome51/public-array-container": "~2.0.3",
+    "@writetome51/public-array-container-by-type-implementation": "~1.0.0",
     "@writetome51/array-remove-all-of-first-of": "~1.0.6",
     "@writetome51/array-remove-adjacent-at": "~1.0.4",
     "@writetome51/array-remove-by-index": "~1.0.2",

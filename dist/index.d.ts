@@ -58,5 +58,8 @@ export declare class PublicArrayRemover extends PublicArrayContainer {
 	byTest(testFunction: (currentItem: any, currentIndex?: number, array?: any[]) => boolean): this;
 
 
-	byType(type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined'): this;
+	byType(
+		type: 'object' | 'array' | 'number' | 'string' | 'boolean' | 'function' | 'undefined' | 'null'
+	): this;
+
 }

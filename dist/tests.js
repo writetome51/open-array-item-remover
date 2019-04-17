@@ -243,3 +243,21 @@ if (obj.className && obj.className === 'PublicArrayRemover' &&
     console.log('test 35 passed');
 else
     console.log('test 35 FAILED');
+// Test 36
+remove.data = [[], 1, '', false, null, undefined];
+otherArr = remove.data;
+// Save this for test 35:
+obj = remove.byType('null');
+if (arrays_match_1.arraysMatch(remove.data, [[], 1, '', false, undefined]))
+    console.log('test 36 passed');
+else
+    console.log('test 36 FAILED');
+// Test 37
+remove.data = [[], {}, 1, '', false, null, undefined];
+otherArr = remove.data;
+// Save this for test 35:
+obj = remove.byType('object');
+if (arrays_match_1.arraysMatch(remove.data, [1, '', false, null, undefined]))
+    console.log('test 37 passed');
+else
+    console.log('test 37 FAILED');

@@ -35,7 +35,7 @@ else console.log('test 2B FAILED');
 
 
 // Test 3
-remove.data =  [1, 2, 3, 4, 5, 6, 7, 8, 9];
+remove.data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 otherArr = remove.data;
 remove.adjacentAt(-3, 2);
 if (arraysMatch(remove.data, [1, 2, 3, 4, 5, 6, 9])) console.log('test 3 passed');
@@ -238,8 +238,27 @@ else console.log('test 33 FAILED');
 if (arraysMatch(remove.data, otherArr)) console.log('test 34 passed');
 else console.log('test 34 FAILED');
 
+
 //Test 35: did .byType() return class instance in test 33?
 if (obj.className && obj.className === 'PublicArrayRemover' &&
 	arraysMatch(remove.data, obj.data))
 	console.log('test 35 passed');
 else console.log('test 35 FAILED');
+
+
+// Test 36
+remove.data = [[], 1, '', false, null, undefined];
+otherArr = remove.data;
+// Save this for test 35:
+obj = remove.byType('null');
+if (arraysMatch(remove.data, [[], 1, '', false, undefined])) console.log('test 36 passed');
+else console.log('test 36 FAILED');
+
+
+// Test 37
+remove.data = [[], {}, 1, '', false, null, undefined];
+otherArr = remove.data;
+// Save this for test 35:
+obj = remove.byType('object');
+if (arraysMatch(remove.data, [ 1, '', false, null, undefined])) console.log('test 37 passed');
+else console.log('test 37 FAILED');
