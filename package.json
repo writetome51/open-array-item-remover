@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/public-array-remover",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "An array-manipulating typescript/javascript class with methods that remove items from the array",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,19 +31,19 @@
     "@writetome51/arrays-match": "~1.0.6"
   },
   "dependencies": {
-    "@writetome51/public-array-container": "~2.0.3",
-    "@writetome51/public-array-container-by-type-implementation": "~1.0.0",
-    "@writetome51/array-remove-all-of-first-of": "~1.0.6",
-    "@writetome51/array-remove-adjacent-at": "~1.0.4",
-    "@writetome51/array-remove-by-index": "~1.0.2",
-    "@writetome51/array-remove-by-indexes": "~1.0.2",
-    "@writetome51/array-remove-head-tail": "~1.0.4",
-    "@writetome51/array-remove-between": "~1.0.3",
-    "@writetome51/array-remove-all-after": "~1.0.0",
-    "@writetome51/array-remove-all-before": "~1.0.0",
-    "@writetome51/array-remove-duplicates": "~1.1.2",
-    "@writetome51/array-remove-adjacent-to-value": "~1.0.3",
-    "@writetome51/adjacent-to-value-info-interface": "~1.0.2",
-    "@writetome51/array-remove-by-test": "~1.0.0"
+    "@writetome51/public-array-container": "^3.0.0",
+    "@writetome51/public-array-container-by-type-implementation": "^1.0.0",
+    "@writetome51/array-remove-all-of-first-of": "^1.0.6",
+    "@writetome51/array-remove-adjacent-at": "^1.0.4",
+    "@writetome51/array-remove-by-index": "^1.0.2",
+    "@writetome51/array-remove-by-indexes": "^1.0.2",
+    "@writetome51/array-remove-head-tail": "^1.0.4",
+    "@writetome51/array-remove-between": "^1.0.3",
+    "@writetome51/array-remove-all-after": "^1.0.0",
+    "@writetome51/array-remove-all-before": "^1.0.0",
+    "@writetome51/array-remove-duplicates": "^1.1.2",
+    "@writetome51/array-remove-adjacent-to-value": "^1.0.3",
+    "@writetome51/adjacent-to-value-info-interface": "^1.0.2",
+    "@writetome51/array-remove-by-test": "^1.0.0"
   }
 }

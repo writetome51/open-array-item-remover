@@ -4,9 +4,7 @@ import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interf
 
 export declare class PublicArrayRemover extends PublicArrayContainer {
 
-	constructor(data?: any[]);
-
-
+	
 	byIndex(index: number): this;
 
 

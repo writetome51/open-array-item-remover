@@ -28,9 +28,8 @@ var array_remove_adjacent_to_value_1 = require("@writetome51/array-remove-adjace
 var array_remove_by_test_1 = require("@writetome51/array-remove-by-test");
 var PublicArrayRemover = /** @class */ (function (_super) {
     __extends(PublicArrayRemover, _super);
-    function PublicArrayRemover(data) {
-        if (data === void 0) { data = []; }
-        return _super.call(this, data) || this;
+    function PublicArrayRemover() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     // These functions modify the array and return the class instance.
     // index can be negative or positive.

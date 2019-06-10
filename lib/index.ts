@@ -19,11 +19,6 @@ import { IAdjacentToValueInfo } from '@writetome51/adjacent-to-value-info-interf
 export class PublicArrayRemover extends PublicArrayContainer {
 
 
-	constructor(data: any[] = []) {
-		super(data);
-	}
-
-
 	// These functions modify the array and return the class instance.
 
 
